@@ -11,7 +11,28 @@ $breakpoint arguement choices:
 - big-desktop
 
 Inside media queries 1em is always 16px i.e 1em = 16px at every screen size only inside media queries
+
 */
+#behance {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  #behance {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #behance iframe {
+    width: 100%;
+  }
+}
+
 *,
 *::after,
 *::before {
